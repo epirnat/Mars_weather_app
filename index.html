@@ -19,16 +19,70 @@
 </div>
 
 <div class="temp">
-<h2 class="section-title"></h2>
-<p class="reading">High: -20°C</p>
-<p class="reading">Low: -120°C</p>
+    <h2 class="section-title"></h2>
+    <p class="reading">High: -20°C</p>
+    <p class="reading">Low: -120°C</p>
 </div>
 
 <div class="wind">
-<h2 class="section-title">Wind</h2>
+    <h2 class="section-title">Wind</h2>
+    <p class="reading">75 kph</p>
+
+    <div class="wind__direction">
+        <p class="sr-only">45deg</p>
+        <div class="wind__arrow"></div>
+    </div>
 </div>
 
+<div class="info">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet erat placerat, congue lectus lobortis, maximus risus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet erat placerat, congue lectus lobortis, maximus risus.</p>
+</div>
+
+<div class="unit">
+    <label for="cel">°C</label>
+    <input type="radio" id="cel" name="unit" checked>
+    <button class="unit__toggle"></button>
+    <label for="fah">°F</label>
+    <input type="radio" id="fah" name="unit">
+</div>
 </main>
+
+<div class="previous-weather">
+
+    <button for="weather-toggle" class="show-previous-weather">
+        <span>&#8593;</span>
+    <span class="sr-only">Show previous weather</span>
+    </button>
+
+    <h2 class="main-title previous-weather__title">Previous 7 dayss</h2> 
+
+    <div class="previous-days" data-previous-sols></div>
+
+  </div>
+
+  <template data-previous-sol-template>
+    <div class="previous-day">
+      <h3 class="previous-day__sol">
+        Sol
+        <span data-sol></span>
+      </h3>
+      <p class="previous-day__date" data-date></p>
+      <p class="previous-day__temp">
+        High:
+        <span data-temp-high></span>
+        °<span data-temp-unit></span>
+      </p>
+      <p class="previous-day__temp">
+        Low:
+        <span data-temp-low></span>
+        °<span data-temp-unit></span>
+      </p>
+      <button class="previous-day__more-info" data-select-button>more info</button>
+    </div>
+ </template>
+
+
 
 <div class="previous-weather"></div>
 
